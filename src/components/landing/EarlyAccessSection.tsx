@@ -72,7 +72,7 @@ export function EarlyAccessSection() {
               <div className="lg:col-span-5 space-y-4">
                 <div className="mb-2">
                   <img
-                    src="/logos/primary/primary-lockup-reversed.svg"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/primary/primary-lockup-reversed.svg`}
                     alt="CollabOS"
                     className="h-10 w-auto"
                   />

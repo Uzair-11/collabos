@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-2">
             <a href="#" className="inline-block group">
               <img
-                src="/logos/primary/primary-lockup-light.svg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/primary/primary-lockup-light.svg`}
                 alt="CollabOS"
                 className="h-10 w-auto transition-transform group-hover:scale-[1.02]"
               />

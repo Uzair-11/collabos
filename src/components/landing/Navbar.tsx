@@ -13,7 +13,7 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
         {/* Brand Logo & Wordmark */}
         <a href="#" className="flex items-center gap-2 group">
           <img
-            src="/logos/primary/primary-lockup-light.svg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/primary/primary-lockup-light.svg`}
             alt="CollabOS"
             className="h-11 w-auto transition-transform group-hover:scale-[1.02]"
           />

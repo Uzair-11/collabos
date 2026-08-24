@@ -405,7 +405,7 @@ export function InteractiveProductHub() {
               {/* Parsed Results Box */}
               <div className="lg:col-span-6 rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-5 relative overflow-hidden">
                 <img
-                  src="/logos/monochrome/watermark.svg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/monochrome/watermark.svg`}
                   alt=""
                   className="absolute -bottom-6 -right-6 w-36 h-36 opacity-30 pointer-events-none select-none"
                 />
