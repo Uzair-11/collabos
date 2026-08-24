@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { CollabOSWatermark } from "@/components/logos/CollabOSLogo";
 
 type TabKey = "deals" | "rights" | "extractor" | "chaser";
 
@@ -404,11 +405,7 @@ export function InteractiveProductHub() {
 
               {/* Parsed Results Box */}
               <div className="lg:col-span-6 rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-5 relative overflow-hidden">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/monochrome/watermark.svg`}
-                  alt=""
-                  className="absolute -bottom-6 -right-6 w-36 h-36 opacity-30 pointer-events-none select-none"
-                />
+                <CollabOSWatermark className="absolute -bottom-6 -right-6 w-36 h-36 pointer-events-none select-none" />
                 <div className="flex items-center justify-between pb-3 border-b border-[#E0D8C5]">
                   <span className="text-xs font-mono font-bold uppercase text-[#1F3D2E] flex items-center gap-1.5">
                     <Check className="h-4 w-4 text-[#1F3D2E]" />

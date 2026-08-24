@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CollabOSPrimaryLight } from "@/components/logos/CollabOSLogo";
 
 export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -12,11 +13,7 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
         {/* Brand Logo & Wordmark */}
         <a href="#" className="flex items-center gap-2 group">
-          <img
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/primary/primary-lockup-light.svg`}
-            alt="CollabOS"
-            className="h-11 w-auto transition-transform group-hover:scale-[1.02]"
-          />
+          <CollabOSPrimaryLight className="h-11 w-auto transition-transform group-hover:scale-[1.02]" />
         </a>
 
         {/* Desktop Nav Links */}

@@ -1,5 +1,7 @@
 "use client";
 
+import { CollabOSPrimaryLight } from "@/components/logos/CollabOSLogo";
+
 export function Footer() {
   return (
     <footer className="border-t border-[#E0D8C5] bg-[#EFE6D4]/60 py-12 text-[#6B6B66] text-xs">
@@ -8,11 +10,7 @@ export function Footer() {
           {/* Logo & Tagline */}
           <div className="space-y-2">
             <a href="#" className="inline-block group">
-              <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logos/primary/primary-lockup-light.svg`}
-                alt="CollabOS"
-                className="h-10 w-auto transition-transform group-hover:scale-[1.02]"
-              />
+              <CollabOSPrimaryLight className="h-10 w-auto transition-transform group-hover:scale-[1.02]" />
             </a>
             <p className="text-xs text-[#6B6B66] max-w-sm">
               The back office for your brand deals. Built for solo creators who outgrew spreadsheets.
