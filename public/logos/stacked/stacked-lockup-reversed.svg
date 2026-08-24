@@ -1,0 +1,9 @@
+<svg width="140" height="150" viewBox="0 0 140 150" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>CollabOS stacked lockup, reversed</title>
+<path d="M 45 90 L 60 90 L 60 108 L 52.5 100 L 45 108 Z" fill="#D98A5E"/>
+<path d="M 60 90 L 75 90 L 75 108 L 67.5 100 L 60 108 Z" fill="#F2AB84"/>
+<circle cx="60" cy="55" r="30" fill="#F6F0E4"/>
+<circle cx="60" cy="55" r="22" fill="#1F3D2E"/>
+<text x="60" y="65" font-family="Baloo 2, sans-serif" font-weight="700" font-size="26" fill="#F6F0E4" text-anchor="middle">C</text>
+<text x="70" y="132" font-family="Baloo 2, sans-serif" font-weight="700" font-size="22" fill="#F6F0E4" text-anchor="middle">CollabOS</text>
+</svg>

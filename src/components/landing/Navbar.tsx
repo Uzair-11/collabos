@@ -11,18 +11,12 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
     <header className="sticky top-0 z-50 w-full border-b border-[#E0D8C5] bg-[#F6F0E4]/90 backdrop-blur-md transition-all">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
         {/* Brand Logo & Wordmark */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#C1622E] text-white font-bold text-lg shadow-sm transition-transform group-hover:scale-105">
-            C
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-2xl font-bold tracking-tight text-[#1F3D2E] leading-none">
-              CollabOS
-            </span>
-            <span className="text-[11px] font-mono tracking-wider text-[#6B6B66] uppercase mt-0.5">
-              collabos.in
-            </span>
-          </div>
+        <a href="#" className="flex items-center gap-2 group">
+          <img
+            src="/logos/primary/primary-lockup-light.svg"
+            alt="CollabOS"
+            className="h-11 w-auto transition-transform group-hover:scale-[1.02]"
+          />
         </a>
 
         {/* Desktop Nav Links */}

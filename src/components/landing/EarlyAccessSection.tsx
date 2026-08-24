@@ -70,6 +70,13 @@ export function EarlyAccessSection() {
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-5 space-y-4">
+                <div className="mb-2">
+                  <img
+                    src="/logos/primary/primary-lockup-reversed.svg"
+                    alt="CollabOS"
+                    className="h-10 w-auto"
+                  />
+                </div>
                 <div className="inline-flex items-center gap-1.5 rounded-md bg-[#2E5A44] px-3 py-1 text-xs font-semibold text-[#DCE6D9]">
                   <Sparkles className="h-3.5 w-3.5" />
                   Limited Founder Beta

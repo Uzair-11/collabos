@@ -1,0 +1,5 @@
+<svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>CollabOS watermark</title>
+<circle cx="45" cy="45" r="40" fill="none" stroke="#2B2B28" stroke-width="3" opacity="0.15"/>
+<text x="45" y="56" font-family="Baloo 2, sans-serif" font-weight="700" font-size="34" fill="#2B2B28" opacity="0.15" text-anchor="middle">C</text>
+</svg>

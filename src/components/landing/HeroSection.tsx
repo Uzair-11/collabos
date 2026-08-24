@@ -23,7 +23,7 @@ export function HeroSection({ onOpenWaitlist }: { onOpenWaitlist: () => void }) 
       <div className="mx-auto max-w-5xl px-6 text-center space-y-8">
         {/* Audience / Problem Target Badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-[#E0D8C5] bg-[#EFE6D4] px-4 py-1.5 text-xs font-medium text-[#1F3D2E] shadow-xs">
-          <span className="flex h-2 w-2 rounded-full bg-[#C1622E]" />
+          <img src="/logos/icon/favicon.svg" alt="CollabOS" className="h-4 w-4" />
           <span>Built for creators who outgrew spreadsheets, but aren't hiring a manager</span>
         </div>
 

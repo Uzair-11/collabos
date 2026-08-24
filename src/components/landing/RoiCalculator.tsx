@@ -1,8 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, ArrowRight, ShieldCheck, DollarSign, Clock, Sparkles } from "lucide-react";
+import { Calculator, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+// Deterministic number formatter to avoid SSR/CSR locale mismatches
+const formatNumber = (num: number) =>
+  Math.round(num)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
   const [dealsPerMonth, setDealsPerMonth] = useState(4);
@@ -10,7 +16,6 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
   const [currency, setCurrency] = useState<"INR" | "USD">("INR");
 
   const symbol = currency === "INR" ? "₹" : "$";
-  const rateMultiplier = currency === "INR" ? 1 : 0.012;
 
   const currentPrice = currency === "INR" ? avgDealPrice : Math.round(avgDealPrice * 0.012);
   const annualRevenue = dealsPerMonth * currentPrice * 12;
@@ -90,7 +95,7 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
                   <label className="font-semibold text-[#2B2B28]">Average fee per sponsorship:</label>
                   <span className="font-mono font-bold text-[#1F3D2E] text-base px-3 py-0.5 rounded bg-[#EFE6D4]">
                     {symbol}
-                    {currentPrice.toLocaleString()}
+                    {formatNumber(currentPrice)}
                   </span>
                 </div>
                 <input
@@ -132,7 +137,7 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
                   </span>
                   <p className="text-3xl font-bold font-serif text-white mt-0.5">
                     {symbol}
-                    {annualRevenue.toLocaleString()}
+                    {formatNumber(annualRevenue)}
                     <span className="text-xs font-normal text-[#DCE6D9]"> / year</span>
                   </p>
                 </div>
@@ -146,7 +151,7 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
                   <span className="text-xs text-[#DCE6D9] block">Manager Commission Saved:</span>
                   <p className="text-xl font-bold text-[#D98A5E] mt-1 font-mono">
                     +{symbol}
-                    {managerFeeSaved.toLocaleString()}
+                    {formatNumber(managerFeeSaved)}
                   </p>
                   <p className="text-[10px] text-[#B9CCB4] mt-0.5">Based on standard 15% agency cut</p>
                 </div>
@@ -155,7 +160,7 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
                   <span className="text-xs text-[#DCE6D9] block">Licensing Renewals Protected:</span>
                   <p className="text-xl font-bold text-[#DCE6D9] mt-1 font-mono">
                     +{symbol}
-                    {licensingRecovered.toLocaleString()}
+                    {formatNumber(licensingRecovered)}
                   </p>
                   <p className="text-[10px] text-[#B9CCB4] mt-0.5">Re-negotiated expired usage rights</p>
                 </div>

@@ -7,12 +7,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           {/* Logo & Tagline */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#C1622E] text-white font-bold text-sm shadow-xs">
-                C
-              </div>
-              <span className="font-serif text-xl font-bold text-[#1F3D2E]">CollabOS</span>
-            </div>
+            <a href="#" className="inline-block group">
+              <img
+                src="/logos/primary/primary-lockup-light.svg"
+                alt="CollabOS"
+                className="h-10 w-auto transition-transform group-hover:scale-[1.02]"
+              />
+            </a>
             <p className="text-xs text-[#6B6B66] max-w-sm">
               The back office for your brand deals. Built for solo creators who outgrew spreadsheets.
             </p>
@@ -42,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-[#E0D8C5] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6B6B66]">
-          <p>© {new Date().getFullYear()} CollabOS &bull; collabos.in &bull; All rights reserved.</p>
+          <p>© 2026 CollabOS &bull; collabos.in &bull; All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5">
               <span className="h-2 w-2 rounded-full bg-[#1F3D2E]" />
