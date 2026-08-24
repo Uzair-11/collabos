@@ -24,27 +24,27 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
   const hoursSavedPerYear = dealsPerMonth * 4 * 12; // 4 hours admin per deal
 
   return (
-    <section id="calculator" className="py-16 md:py-24 bg-[#EFE6D4]/30 border-y border-[#E0D8C5]">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center space-y-3 max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-xs font-semibold text-[#1F3D2E]">
+    <section id="calculator" className="py-12 sm:py-16 md:py-24 bg-[#EFE6D4]/30 border-y border-[#E0D8C5]">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="text-center space-y-3 max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#1F3D2E]">
             <Calculator className="h-3.5 w-3.5" />
             Creator Economics Calculator
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F3D2E]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F3D2E] leading-tight">
             How much are manual spreadsheets costing you?
           </h2>
-          <p className="text-sm sm:text-base text-[#6B6B66]">
+          <p className="text-xs sm:text-sm md:text-base text-[#6B6B66]">
             Estimate how much revenue you protect by tracking license renewals and avoiding agency commission cuts.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
           {/* Controls Card */}
-          <div className="lg:col-span-6 rounded-2xl border border-[#E0D8C5] bg-white p-7 space-y-6 shadow-xs flex flex-col justify-between">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between border-b border-[#E0D8C5] pb-4">
-                <h3 className="font-serif text-lg font-bold text-[#1F3D2E]">Your Brand Deal Volume</h3>
+          <div className="lg:col-span-6 rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-5 sm:p-7 space-y-5 sm:space-y-6 shadow-xs flex flex-col justify-between">
+            <div className="space-y-5 sm:space-y-6">
+              <div className="flex items-center justify-between border-b border-[#E0D8C5] pb-3 sm:pb-4">
+                <h3 className="font-serif text-base sm:text-lg font-bold text-[#1F3D2E]">Your Brand Deal Volume</h3>
                 <div className="flex items-center gap-1 bg-[#F6F0E4] p-1 rounded-lg border border-[#E0D8C5]">
                   <button
                     onClick={() => setCurrency("INR")}
@@ -128,21 +128,21 @@ export function RoiCalculator({ onOpenWaitlist }: { onOpenWaitlist: () => void }
           </div>
 
           {/* Results Summary Card */}
-          <div className="lg:col-span-6 rounded-2xl border-2 border-[#1F3D2E] bg-[#1F3D2E] text-[#F6F0E4] p-7 space-y-6 flex flex-col justify-between shadow-md">
+          <div className="lg:col-span-6 rounded-xl sm:rounded-2xl border-2 border-[#1F3D2E] bg-[#1F3D2E] text-[#F6F0E4] p-5 sm:p-7 space-y-5 sm:space-y-6 flex flex-col justify-between shadow-md">
             <div>
               <div className="flex items-center justify-between border-b border-[#2E5A44] pb-4">
                 <div>
-                  <span className="text-xs font-mono text-[#DCE6D9] uppercase tracking-wider">
+                  <span className="text-[11px] sm:text-xs font-mono text-[#DCE6D9] uppercase tracking-wider">
                     Projected Annual Sponsorship Flow
                   </span>
-                  <p className="text-3xl font-bold font-serif text-white mt-0.5">
+                  <p className="text-2xl sm:text-3xl font-bold font-serif text-white mt-0.5">
                     {symbol}
                     {formatNumber(annualRevenue)}
                     <span className="text-xs font-normal text-[#DCE6D9]"> / year</span>
                   </p>
                 </div>
-                <div className="h-10 w-10 rounded-xl bg-[#C1622E] text-white flex items-center justify-center font-bold">
-                  <Sparkles className="h-5 w-5" />
+                <div className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl bg-[#C1622E] text-white flex items-center justify-center font-bold">
+                  <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
               </div>
 

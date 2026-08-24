@@ -9,11 +9,11 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E0D8C5] bg-[#F6F0E4]/90 backdrop-blur-md transition-all">
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
+    <header className="sticky top-0 z-50 w-full border-b border-[#E0D8C5] bg-[#F6F0E4]/95 backdrop-blur-md transition-all">
+      <div className="mx-auto flex h-16 sm:h-18 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Brand Logo & Wordmark */}
         <a href="#" className="flex items-center gap-2 group">
-          <CollabOSPrimaryLight className="h-11 w-auto transition-transform group-hover:scale-[1.02]" />
+          <CollabOSPrimaryLight className="h-8 sm:h-11 w-auto max-w-[150px] sm:max-w-none transition-transform group-hover:scale-[1.02]" />
         </a>
 
         {/* Desktop Nav Links */}
@@ -52,7 +52,7 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg text-[#1F3D2E] hover:bg-[#EFE6D4]"
+          className="md:hidden p-2 rounded-lg text-[#1F3D2E] hover:bg-[#EFE6D4] transition-colors"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -61,47 +61,47 @@ export function Navbar({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
 
       {/* Mobile navigation panel */}
       {mobileOpen && (
-        <div className="md:hidden border-b border-[#E0D8C5] bg-[#F6F0E4] px-6 py-5 space-y-4">
-          <nav className="flex flex-col space-y-3 text-base font-medium text-[#2B2B28]">
+        <div className="md:hidden border-b border-[#E0D8C5] bg-[#F6F0E4] px-5 py-5 space-y-4 animate-in slide-in-from-top-2 duration-200">
+          <nav className="flex flex-col space-y-3 text-sm font-semibold text-[#2B2B28]">
             <a
               href="#features"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               Features
             </a>
             <a
               href="#interactive-hub"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               Interactive Demo
             </a>
             <a
               href="#rights-guard"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               Usage Rights Guard
             </a>
             <a
               href="#calculator"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               ROI Calculator
             </a>
             <a
               href="#pricing"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               Pricing
             </a>
             <a
               href="#faq"
               onClick={() => setMobileOpen(false)}
-              className="py-1 hover:text-[#1F3D2E]"
+              className="py-2 px-2 rounded-md hover:bg-[#EFE6D4] hover:text-[#1F3D2E] transition-colors"
             >
               FAQ
             </a>

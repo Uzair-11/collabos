@@ -30,19 +30,19 @@ export function EarlyAccessSection() {
   };
 
   return (
-    <section id="early-access" className="py-16 md:py-24">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="rounded-3xl border-2 border-[#1F3D2E] bg-[#1F3D2E] text-[#F6F0E4] p-8 sm:p-12 shadow-xl relative overflow-hidden">
+    <section id="early-access" className="py-12 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="rounded-2xl sm:rounded-3xl border-2 border-[#1F3D2E] bg-[#1F3D2E] text-[#F6F0E4] p-5 sm:p-8 md:p-12 shadow-xl relative overflow-hidden">
           {/* Subtle Background pattern */}
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-[#2E5A44]/40 blur-2xl pointer-events-none" />
 
           {submitted ? (
-            <div className="text-center space-y-6 max-w-md mx-auto py-6 animate-in fade-in zoom-in-95">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] mx-auto">
-                <CheckCircle2 className="h-8 w-8" />
+            <div className="text-center space-y-5 sm:space-y-6 max-w-md mx-auto py-4 sm:py-6 animate-in fade-in zoom-in-95">
+              <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] mx-auto">
+                <CheckCircle2 className="h-6 w-6 sm:h-8 sm:w-8" />
               </div>
               <div className="space-y-2">
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white">
                   You're in! Welcome to CollabOS.
                 </h3>
                 <p className="text-xs sm:text-sm text-[#DCE6D9]">
@@ -50,8 +50,8 @@ export function EarlyAccessSection() {
                 </p>
               </div>
 
-              <div className="rounded-xl bg-[#14291F] p-4 border border-[#2E5A44] space-y-3">
-                <span className="text-xs text-[#B9CCB4] block">Share your invite link with creator peers:</span>
+              <div className="rounded-xl bg-[#14291F] p-3.5 sm:p-4 border border-[#2E5A44] space-y-2.5 sm:space-y-3">
+                <span className="text-[11px] sm:text-xs text-[#B9CCB4] block">Share your invite link with creator peers:</span>
                 <div className="flex items-center gap-2">
                   <Input
                     readOnly
@@ -61,7 +61,7 @@ export function EarlyAccessSection() {
                   <Button
                     onClick={handleCopy}
                     size="sm"
-                    className="btn-clay h-10 px-4 text-xs font-semibold shrink-0"
+                    className="btn-clay h-10 px-3.5 sm:px-4 text-xs font-semibold shrink-0"
                   >
                     {copied ? "Copied!" : <Copy className="h-4 w-4" />}
                   </Button>
@@ -69,35 +69,35 @@ export function EarlyAccessSection() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-5 space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-5 space-y-3 sm:space-y-4">
                 <div className="mb-2">
-                  <CollabOSPrimaryReversed className="h-10 w-auto" />
+                  <CollabOSPrimaryReversed className="h-8 sm:h-10 w-auto" />
                 </div>
-                <div className="inline-flex items-center gap-1.5 rounded-md bg-[#2E5A44] px-3 py-1 text-xs font-semibold text-[#DCE6D9]">
+                <div className="inline-flex items-center gap-1.5 rounded-md bg-[#2E5A44] px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#DCE6D9]">
                   <Sparkles className="h-3.5 w-3.5" />
                   Limited Founder Beta
                 </div>
-                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
                   Be first to run brand deals with CollabOS.
                 </h2>
                 <p className="text-xs sm:text-sm text-[#DCE6D9] leading-relaxed">
                   Join hundreds of solo YouTubers, Instagrammers, and content creators taking back control of their deal flow and invoicing.
                 </p>
-                <div className="pt-2 space-y-2 text-xs text-[#B9CCB4]">
+                <div className="pt-1 sm:pt-2 space-y-2 text-xs text-[#B9CCB4]">
                   <div className="flex items-center gap-2">
-                    <ShieldCheck className="h-4 w-4 text-[#D98A5E]" />
+                    <ShieldCheck className="h-4 w-4 text-[#D98A5E] shrink-0" />
                     <span>Free Pro Tier for early beta cohort</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <ShieldCheck className="h-4 w-4 text-[#D98A5E]" />
+                    <ShieldCheck className="h-4 w-4 text-[#D98A5E] shrink-0" />
                     <span>Direct 1-on-1 input into upcoming features</span>
                   </div>
                 </div>
               </div>
 
               {/* Form */}
-              <div className="lg:col-span-7 rounded-2xl bg-[#14291F] border border-[#2E5A44] p-6 sm:p-8 space-y-4">
+              <div className="lg:col-span-7 rounded-xl sm:rounded-2xl bg-[#14291F] border border-[#2E5A44] p-4 sm:p-6 md:p-8 space-y-4">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">

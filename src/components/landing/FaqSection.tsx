@@ -34,22 +34,22 @@ export function FaqSection() {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[#EFE6D4]/30 border-y border-[#E0D8C5]">
-      <div className="mx-auto max-w-4xl px-6 space-y-12">
+    <section id="faq" className="py-12 sm:py-16 md:py-24 bg-[#EFE6D4]/30 border-y border-[#E0D8C5]">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 space-y-8 sm:space-y-12">
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-xs font-semibold text-[#1F3D2E]">
+          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#1F3D2E]">
             <Sparkles className="h-3.5 w-3.5" />
             Frequently Asked Questions
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F3D2E]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F3D2E] leading-tight">
             Everything you need to know about CollabOS
           </h2>
-          <p className="text-sm text-[#6B6B66]">
+          <p className="text-xs sm:text-sm text-[#6B6B66]">
             Straightforward answers on how we help solo creators manage sponsorships.
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2.5 sm:space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -59,7 +59,7 @@ export function FaqSection() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold text-sm sm:text-base text-[#1F3D2E]"
+                  className="w-full px-4 sm:px-6 py-3.5 sm:py-4 text-left flex items-center justify-between gap-3 font-semibold text-xs sm:text-base text-[#1F3D2E]"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -69,7 +69,7 @@ export function FaqSection() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#6B6B66] leading-relaxed border-t border-[#E0D8C5]/60 bg-[#F6F0E4]/30">
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#6B6B66] leading-relaxed border-t border-[#E0D8C5]/60 bg-[#F6F0E4]/30">
                     {faq.a}
                   </div>
                 )}

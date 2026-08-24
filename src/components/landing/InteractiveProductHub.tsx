@@ -86,83 +86,83 @@ export function InteractiveProductHub() {
   };
 
   return (
-    <section id="interactive-hub" className="py-16 md:py-24 border-y border-[#E0D8C5] bg-[#EFE6D4]/40">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="interactive-hub" className="py-12 sm:py-16 md:py-24 border-y border-[#E0D8C5] bg-[#EFE6D4]/40">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center space-y-3 max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-xs font-semibold text-[#1F3D2E]">
+        <div className="text-center space-y-3 max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#1F3D2E]">
             <Sparkles className="h-3.5 w-3.5" />
             Interactive Product Preview
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F3D2E]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F3D2E] leading-tight">
             Experience the calm of a dedicated creator back office
           </h2>
-          <p className="text-sm sm:text-base text-[#6B6B66]">
+          <p className="text-xs sm:text-sm md:text-base text-[#6B6B66]">
             See how CollabOS transforms chaotic DMs and spreadsheets into clear deal pipelines, automated invoicing, and proactive licensing protection.
           </p>
         </div>
 
-        {/* Tab Selector Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+        {/* Tab Selector Bar (Scrollable on mobile) */}
+        <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap items-center sm:justify-center gap-2 mb-6 sm:mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
           <button
             onClick={() => setActiveTab("deals")}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold shrink-0 transition-all ${
               activeTab === "deals"
                 ? "bg-[#1F3D2E] text-[#F6F0E4] shadow-sm"
                 : "bg-white/80 border border-[#E0D8C5] text-[#2B2B28] hover:bg-white"
             }`}
           >
-            <FileText className="h-4 w-4" />
-            <span>1. Deal & Contract Tracker</span>
+            <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            <span>1. Deal Tracker</span>
           </button>
 
           <button
             onClick={() => setActiveTab("rights")}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold shrink-0 transition-all ${
               activeTab === "rights"
                 ? "bg-[#1F3D2E] text-[#F6F0E4] shadow-sm"
                 : "bg-white/80 border border-[#E0D8C5] text-[#2B2B28] hover:bg-white"
             }`}
           >
-            <ShieldAlert className="h-4 w-4 text-[#C1622E]" />
+            <ShieldAlert className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#C1622E]" />
             <span>2. Usage Rights Guard</span>
-            <span className="ml-1 text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#C1622E] text-white">
-              Sharp Differentiator
+            <span className="hidden sm:inline-block ml-1 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#C1622E] text-white">
+              Differentiator
             </span>
           </button>
 
           <button
             onClick={() => setActiveTab("extractor")}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold shrink-0 transition-all ${
               activeTab === "extractor"
                 ? "bg-[#1F3D2E] text-[#F6F0E4] shadow-sm"
                 : "bg-white/80 border border-[#E0D8C5] text-[#2B2B28] hover:bg-white"
             }`}
           >
-            <Sparkles className="h-4 w-4" />
-            <span>3. 60s AI Contract Ingestion</span>
+            <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            <span>3. 60s AI Ingestion</span>
           </button>
 
           <button
             onClick={() => setActiveTab("chaser")}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+            className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold shrink-0 transition-all ${
               activeTab === "chaser"
                 ? "bg-[#1F3D2E] text-[#F6F0E4] shadow-sm"
                 : "bg-white/80 border border-[#E0D8C5] text-[#2B2B28] hover:bg-white"
             }`}
           >
-            <Send className="h-4 w-4" />
-            <span>4. Automated Payment Chaser</span>
+            <Send className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            <span>4. Payment Chaser</span>
           </button>
         </div>
 
         {/* Tab 1: Deal Tracker */}
         {activeTab === "deals" && (
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-6 sm:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E0D8C5]">
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-4 sm:p-6 md:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-[#E0D8C5]">
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#1F3D2E]">Active Sponsorship Deals</h3>
-                <p className="text-xs text-[#6B6B66] mt-0.5">3 brand contracts active &bull; Total Pipeline: ₹1,85,000</p>
+                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#1F3D2E]">Active Sponsorship Deals</h3>
+                <p className="text-[11px] sm:text-xs text-[#6B6B66] mt-0.5">3 brand contracts active &bull; Total Pipeline: ₹1,85,000</p>
               </div>
 
               {/* Filters */}
@@ -255,44 +255,44 @@ export function InteractiveProductHub() {
 
         {/* Tab 2: Usage Rights Guard */}
         {activeTab === "rights" && (
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-6 sm:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-6 space-y-4">
-                <div className="inline-flex items-center gap-1.5 rounded-md bg-[#FBE4D4] px-3 py-1 text-xs font-semibold text-[#93481F]">
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-4 sm:p-6 md:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+                <div className="inline-flex items-center gap-1.5 rounded-md bg-[#FBE4D4] px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#93481F]">
                   <AlertTriangle className="h-3.5 w-3.5" />
                   Why 80% of Creators Lose Money
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F3D2E]">
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#1F3D2E] leading-tight">
                   Never let brands run ads with your face after the license expires.
                 </h3>
-                <p className="text-sm text-[#6B6B66] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#6B6B66] leading-relaxed">
                   When a brand buys a sponsorship, they often include <strong>"30 or 60 days paid digital usage rights"</strong>. 
                   Most creators forget the date, and brands keep running high-spend Meta ads with your likeness for months for free.
                 </p>
                 
-                <div className="space-y-3 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-xs">
+                <div className="space-y-2.5 sm:space-y-3 pt-2">
+                  <div className="flex items-start gap-2.5 sm:gap-3">
+                    <div className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-[11px] sm:text-xs">
                       1
                     </div>
-                    <p className="text-xs text-[#2B2B28]">
+                    <p className="text-[11px] sm:text-xs text-[#2B2B28]">
                       <strong>Automated License Expiry Clock:</strong> CollabOS calculates exact expiration dates from the moment your content goes live.
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-xs">
+                  <div className="flex items-start gap-2.5 sm:gap-3">
+                    <div className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-[11px] sm:text-xs">
                       2
                     </div>
-                    <p className="text-xs text-[#2B2B28]">
+                    <p className="text-[11px] sm:text-xs text-[#2B2B28]">
                       <strong>14-Day Renewal Trigger:</strong> Get alerted 14 days before expiration so you can offer an extension package (e.g. +₹25,000 for another 60 days).
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-xs">
+                  <div className="flex items-start gap-2.5 sm:gap-3">
+                    <div className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-full bg-[#DCE6D9] text-[#1F3D2E] font-bold text-[11px] sm:text-xs">
                       3
                     </div>
-                    <p className="text-xs text-[#2B2B28]">
-                      <strong>1-Click Takedown / Extension Notice:</strong> Send pre-written professional renewal letters to the brand manager in one click.
+                    <p className="text-[11px] sm:text-xs text-[#2B2B28]">
+                      <strong>1-Click Notice:</strong> Send pre-written professional renewal letters or takedown requests to the brand manager in one click.
                     </p>
                   </div>
                 </div>
@@ -300,42 +300,42 @@ export function InteractiveProductHub() {
 
               {/* Rights Interactive Card */}
               <div className="lg:col-span-6">
-                <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-6 space-y-4 shadow-xs">
+                <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-4 sm:p-6 space-y-3 sm:space-y-4 shadow-xs">
                   <div className="flex items-center justify-between border-b border-[#E0D8C5] pb-3">
                     <div className="flex items-center gap-2">
-                      <div className="h-3 w-3 rounded-full bg-[#C1622E] animate-pulse" />
-                      <span className="text-xs font-mono font-bold uppercase text-[#1F3D2E]">
+                      <div className="h-2.5 w-2.5 rounded-full bg-[#C1622E] animate-pulse" />
+                      <span className="text-[11px] sm:text-xs font-mono font-bold uppercase text-[#1F3D2E]">
                         Live License Monitor
                       </span>
                     </div>
-                    <Badge variant="outline" className="border-[#C1622E] text-[#C1622E] bg-[#FBE4D4] text-xs">
+                    <Badge variant="outline" className="border-[#C1622E] text-[#C1622E] bg-[#FBE4D4] text-[10px] sm:text-xs">
                       ⚠️ 12 Days Remaining
                     </Badge>
                   </div>
 
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center text-sm">
+                  <div className="space-y-2.5 text-xs sm:text-sm">
+                    <div className="flex justify-between items-center">
                       <span className="text-[#6B6B66]">Campaign:</span>
-                      <span className="font-semibold text-[#1F3D2E]">Nike Air Max Launch Reel</span>
+                      <span className="font-semibold text-[#1F3D2E]">Nike Air Max Reel</span>
                     </div>
-                    <div className="flex justify-between items-center text-sm">
+                    <div className="flex justify-between items-center">
                       <span className="text-[#6B6B66]">Usage Scope:</span>
-                      <span className="font-medium text-[#2B2B28]">Meta Dark Ads (Instagram / FB)</span>
+                      <span className="font-medium text-[#2B2B28]">Meta Dark Ads</span>
                     </div>
-                    <div className="flex justify-between items-center text-sm">
+                    <div className="flex justify-between items-center">
                       <span className="text-[#6B6B66]">License Window:</span>
-                      <span className="font-mono text-xs font-semibold text-[#1F3D2E]">60 Days (Expires Sep 05)</span>
+                      <span className="font-mono text-[11px] sm:text-xs font-semibold text-[#1F3D2E]">60 Days (Expires Sep 05)</span>
                     </div>
                   </div>
 
                   {/* Visual Progress Bar */}
-                  <div className="space-y-1.5 pt-2">
-                    <div className="flex justify-between text-[11px] text-[#6B6B66]">
-                      <span>Day 1 (Published)</span>
+                  <div className="space-y-1.5 pt-1 sm:pt-2">
+                    <div className="flex justify-between text-[10px] sm:text-[11px] text-[#6B6B66]">
+                      <span>Day 1 (Live)</span>
                       <span className="font-bold text-[#C1622E]">Day 48 / 60</span>
                       <span>Day 60 (Expiry)</span>
                     </div>
-                    <div className="h-3 w-full bg-[#E0D8C5] rounded-full overflow-hidden">
+                    <div className="h-2.5 sm:h-3 w-full bg-[#E0D8C5] rounded-full overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-[#1F3D2E] via-[#C1622E] to-[#8C2E1D] w-[80%]" />
                     </div>
                   </div>
@@ -357,22 +357,22 @@ export function InteractiveProductHub() {
 
         {/* Tab 3: AI Contract Scanner */}
         {activeTab === "extractor" && (
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-6 sm:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
-            <div className="max-w-3xl mb-6">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F3D2E]">
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-4 sm:p-6 md:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
+            <div className="max-w-3xl mb-4 sm:mb-6">
+              <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-[#1F3D2E]">
                 60-Second Onboarding: Paste any email or contract
               </h3>
               <p className="text-xs sm:text-sm text-[#6B6B66] mt-1">
-                No tedious data entry. Simply copy the deal email thread or contract text, and CollabOS extracts deliverables, fees, deadlines, and usage windows automatically.
+                No tedious data entry. Copy the deal email thread or contract text, and CollabOS extracts deliverables, fees, deadlines, and usage windows automatically.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
               {/* Input Box */}
               <div className="lg:col-span-6 space-y-3">
                 <div className="flex items-center justify-between">
-                  <label className="text-xs font-mono font-semibold uppercase text-[#6B6B66]">
-                    Paste Brand Deal Email or Terms
+                  <label className="text-[11px] sm:text-xs font-mono font-semibold uppercase text-[#6B6B66]">
+                    Paste Brand Deal Email
                   </label>
                   <button
                     onClick={() =>
@@ -380,7 +380,7 @@ export function InteractiveProductHub() {
                         `Hi Alex, confirmed! We agree on ₹80,000 for 1 dedicated YouTube video + 1 Instagram Reel for the festival campaign. Publishing deadline is September 15. We require 60 days of digital ad whitelist rights. Payment will be Net-15 upon posting live link.`
                       )
                     }
-                    className="text-xs text-[#C1622E] hover:underline font-medium"
+                    className="text-[11px] sm:text-xs text-[#C1622E] hover:underline font-medium"
                   >
                     Load Sample Email 2
                   </button>
@@ -389,14 +389,14 @@ export function InteractiveProductHub() {
                 <textarea
                   value={sampleText}
                   onChange={(e) => setSampleText(e.target.value)}
-                  rows={6}
-                  className="w-full rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/40 p-3.5 text-xs text-[#2B2B28] font-mono leading-relaxed focus:outline-none focus:ring-1 focus:ring-[#C1622E]"
+                  rows={5}
+                  className="w-full rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/40 p-3 text-xs text-[#2B2B28] font-mono leading-relaxed focus:outline-none focus:ring-1 focus:ring-[#C1622E]"
                 />
 
                 <Button
                   onClick={handleSimulateExtraction}
                   disabled={extracting}
-                  className="btn-clay w-full h-11 text-xs font-semibold flex items-center justify-center gap-2"
+                  className="btn-clay w-full h-10 sm:h-11 text-xs font-semibold flex items-center justify-center gap-2"
                 >
                   <Sparkles className="h-4 w-4" />
                   {extracting ? "Parsing terms with AI..." : "Extract Deal & Rights in 60s"}
@@ -404,41 +404,41 @@ export function InteractiveProductHub() {
               </div>
 
               {/* Parsed Results Box */}
-              <div className="lg:col-span-6 rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-5 relative overflow-hidden">
+              <div className="lg:col-span-6 rounded-xl border border-[#E0D8C5] bg-[#F6F0E4] p-4 sm:p-5 relative overflow-hidden">
                 <CollabOSWatermark className="absolute -bottom-6 -right-6 w-36 h-36 pointer-events-none select-none" />
                 <div className="flex items-center justify-between pb-3 border-b border-[#E0D8C5]">
-                  <span className="text-xs font-mono font-bold uppercase text-[#1F3D2E] flex items-center gap-1.5">
+                  <span className="text-[11px] sm:text-xs font-mono font-bold uppercase text-[#1F3D2E] flex items-center gap-1.5">
                     <Check className="h-4 w-4 text-[#1F3D2E]" />
                     Extracted Contract Structure
                   </span>
-                  <Badge variant="outline" className="text-[10px] bg-[#DCE6D9] text-[#1F3D2E] border-none">
+                  <Badge variant="outline" className="text-[9px] sm:text-[10px] bg-[#DCE6D9] text-[#1F3D2E] border-none">
                     Confidence: 99.4%
                   </Badge>
                 </div>
 
                 {extractedData ? (
-                  <div className="space-y-3 pt-3 text-xs">
+                  <div className="space-y-2.5 sm:space-y-3 pt-3 text-xs">
                     <div className="grid grid-cols-2 gap-2">
                       <div className="bg-white p-2.5 rounded-lg border border-[#E0D8C5]">
-                        <span className="text-[#6B6B66] text-[11px] block">Agreed Fee:</span>
-                        <span className="font-bold text-[#1F3D2E] text-sm">$1,500 / ₹1,25,000</span>
+                        <span className="text-[#6B6B66] text-[10px] sm:text-[11px] block">Agreed Fee:</span>
+                        <span className="font-bold text-[#1F3D2E] text-xs sm:text-sm">$1,500 / ₹1,25,000</span>
                       </div>
                       <div className="bg-white p-2.5 rounded-lg border border-[#E0D8C5]">
-                        <span className="text-[#6B6B66] text-[11px] block">Payment Terms:</span>
-                        <span className="font-bold text-[#1F3D2E] text-sm">Net-30 upon publish</span>
+                        <span className="text-[#6B6B66] text-[10px] sm:text-[11px] block">Payment Terms:</span>
+                        <span className="font-bold text-[#1F3D2E] text-xs sm:text-sm">Net-30 upon publish</span>
                       </div>
                     </div>
 
                     <div className="bg-white p-2.5 rounded-lg border border-[#E0D8C5]">
-                      <span className="text-[#6B6B66] text-[11px] block">Deliverables Detected:</span>
-                      <p className="font-medium text-[#2B2B28] mt-0.5">• 1x 60-second integrated shoutout (YouTube)</p>
+                      <span className="text-[#6B6B66] text-[10px] sm:text-[11px] block">Deliverables Detected:</span>
+                      <p className="font-medium text-[#2B2B28] mt-0.5">• 1x 60-second integrated shoutout</p>
                       <p className="font-medium text-[#2B2B28]">• 1x Link in description</p>
                     </div>
 
                     <div className="bg-white p-2.5 rounded-lg border border-[#E0D8C5]">
-                      <span className="text-[#6B6B66] text-[11px] block">Usage Rights Clause:</span>
+                      <span className="text-[#6B6B66] text-[10px] sm:text-[11px] block">Usage Rights Clause:</span>
                       <p className="font-medium text-[#C1622E] mt-0.5">
-                        ⚠️ 30 Days Paid Ad Whitelist (Auto-expiry alert scheduled for Day 16 & Day 28)
+                        ⚠️ 30 Days Paid Whitelist (Alerts scheduled)
                       </p>
                     </div>
 
@@ -447,7 +447,7 @@ export function InteractiveProductHub() {
                     </Button>
                   </div>
                 ) : (
-                  <div className="h-48 flex items-center justify-center text-xs text-[#6B6B66]">
+                  <div className="h-40 flex items-center justify-center text-xs text-[#6B6B66]">
                     Analyzing contract text...
                   </div>
                 )}
@@ -458,53 +458,53 @@ export function InteractiveProductHub() {
 
         {/* Tab 4: Payment Chaser */}
         {activeTab === "chaser" && (
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-6 sm:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
-            <div className="max-w-3xl mb-6">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#1F3D2E]">
-                Automated, Courteous Invoicing &amp; Payment Chasing
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-4 sm:p-6 md:p-8 shadow-sm transition-all animate-in fade-in-50 duration-200">
+            <div className="max-w-3xl mb-4 sm:mb-6">
+              <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-[#1F3D2E]">
+                Automated, Courteous Payment Chasing
               </h3>
               <p className="text-xs sm:text-sm text-[#6B6B66] mt-1">
-                Stop feeling uncomfortable following up in Instagram DMs. CollabOS sends professional email sequences that get creators paid 14 days faster on average.
+                Stop feeling uncomfortable following up in DMs. CollabOS sends polite email sequences that get creators paid 14 days faster on average.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
               {/* Sequence 1 */}
-              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-4 space-y-2.5">
+              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-3.5 sm:p-4 space-y-2">
                 <div className="flex items-center justify-between">
                   <Badge variant="outline" className="bg-[#DCE6D9] text-[#1F3D2E] text-[10px]">
-                    Step 1 &bull; 3 Days Before Due
+                    Step 1 &bull; 3 Days Pre-Due
                   </Badge>
                 </div>
-                <h4 className="font-semibold text-xs text-[#1F3D2E]">The Friendly Pre-Due Nudge</h4>
-                <div className="bg-white p-3 rounded-lg border border-[#E0D8C5] text-[11px] text-[#6B6B66] font-mono leading-relaxed">
+                <h4 className="font-semibold text-xs text-[#1F3D2E]">Friendly Pre-Due Nudge</h4>
+                <div className="bg-white p-2.5 sm:p-3 rounded-lg border border-[#E0D8C5] text-[10px] sm:text-[11px] text-[#6B6B66] font-mono leading-relaxed">
                   "Hi Team, hope you loved the campaign performance! Just sending a quick heads up that Invoice #INV-102 is scheduled for payment this Thursday..."
                 </div>
               </div>
 
               {/* Sequence 2 */}
-              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-4 space-y-2.5">
+              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-3.5 sm:p-4 space-y-2">
                 <div className="flex items-center justify-between">
                   <Badge variant="outline" className="bg-[#FBE4D4] text-[#93481F] text-[10px]">
-                    Step 2 &bull; Day of Due Date
+                    Step 2 &bull; Due Date
                   </Badge>
                 </div>
-                <h4 className="font-semibold text-xs text-[#1F3D2E]">The Payment Due Notice</h4>
-                <div className="bg-white p-3 rounded-lg border border-[#E0D8C5] text-[11px] text-[#6B6B66] font-mono leading-relaxed">
-                  "Hello, today is the due date for Invoice #INV-102 (₹45,000). Please share the UTR / wire confirmation once processed..."
+                <h4 className="font-semibold text-xs text-[#1F3D2E]">Payment Due Notice</h4>
+                <div className="bg-white p-2.5 sm:p-3 rounded-lg border border-[#E0D8C5] text-[10px] sm:text-[11px] text-[#6B6B66] font-mono leading-relaxed">
+                  "Hello, today is the due date for Invoice #INV-102 (₹45,000). Please share the wire confirmation once processed..."
                 </div>
               </div>
 
               {/* Sequence 3 */}
-              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-4 space-y-2.5">
+              <div className="rounded-xl border border-[#E0D8C5] bg-[#F6F0E4]/60 p-3.5 sm:p-4 space-y-2">
                 <div className="flex items-center justify-between">
                   <Badge variant="outline" className="bg-[#F6D6D0] text-[#8C2E1D] text-[10px]">
                     Step 3 &bull; 5 Days Overdue
                   </Badge>
                 </div>
-                <h4 className="font-semibold text-xs text-[#1F3D2E]">The Formal Overdue &amp; Pause Notice</h4>
-                <div className="bg-white p-3 rounded-lg border border-[#E0D8C5] text-[11px] text-[#6B6B66] font-mono leading-relaxed">
-                  "Important: Invoice #INV-102 is now 5 days past agreed terms. As per contract section 4, content licensing rights are paused until settlement..."
+                <h4 className="font-semibold text-xs text-[#1F3D2E]">Formal Overdue &amp; Pause</h4>
+                <div className="bg-white p-2.5 sm:p-3 rounded-lg border border-[#E0D8C5] text-[10px] sm:text-[11px] text-[#6B6B66] font-mono leading-relaxed">
+                  "Important: Invoice #INV-102 is now 5 days past terms. Content licensing rights are paused until settlement..."
                 </div>
               </div>
             </div>

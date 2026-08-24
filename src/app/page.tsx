@@ -21,15 +21,15 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F6F0E4] text-[#2B2B28] font-sans selection:bg-[#C1622E] selection:text-white">
       {/* Top Banner */}
-      <div className="bg-[#1F3D2E] text-[#F6F0E4] py-2 px-4 text-center text-xs font-medium border-b border-[#14291F]">
-        <div className="container mx-auto flex items-center justify-center gap-2">
-          <span className="inline-block h-2 w-2 rounded-full bg-[#C1622E] animate-pulse" />
+      <div className="bg-[#1F3D2E] text-[#F6F0E4] py-2 px-3 text-center text-[11px] sm:text-xs font-medium border-b border-[#14291F]">
+        <div className="container mx-auto flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+          <span className="inline-block h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#C1622E] animate-pulse shrink-0" />
           <span>
-            <strong>CollabOS Beta Cohort:</strong> Opening priority onboarding for creators with 10K–500K followers.
+            <strong>CollabOS Beta:</strong> Priority onboarding for creators (10K–500K).
           </span>
           <button
             onClick={scrollToWaitlist}
-            className="underline text-[#DCE6D9] hover:text-white font-semibold ml-1 cursor-pointer"
+            className="underline text-[#DCE6D9] hover:text-white font-semibold cursor-pointer shrink-0"
           >
             Claim Access &rarr;
           </button>

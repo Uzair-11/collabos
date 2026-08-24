@@ -5,26 +5,26 @@ import { Button } from "@/components/ui/button";
 
 export function PricingSection({ onOpenWaitlist }: { onOpenWaitlist: () => void }) {
   return (
-    <section id="pricing" className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6 space-y-16">
+    <section id="pricing" className="py-12 sm:py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-10 sm:space-y-16">
         {/* Section Header */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-xs font-semibold text-[#1F3D2E]">
+          <div className="inline-flex items-center gap-1.5 rounded-md bg-[#DCE6D9] px-3 py-1 text-[11px] sm:text-xs font-semibold text-[#1F3D2E]">
             <Sparkles className="h-3.5 w-3.5" />
             Simple, Transparent Creator Pricing
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F3D2E]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F3D2E] leading-tight">
             Keep 100% of your sponsorships. No hidden commissions.
           </h2>
-          <p className="text-sm sm:text-base text-[#6B6B66]">
+          <p className="text-xs sm:text-sm md:text-base text-[#6B6B66]">
             Traditional talent managers take 10%–20% off the top of every deal. CollabOS gives you the back office power for a flat, predictable subscription.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto items-stretch">
           {/* Plan 1: Free Starter */}
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-7 space-y-6 flex flex-col justify-between shadow-xs">
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-5 sm:p-7 space-y-5 sm:space-y-6 flex flex-col justify-between shadow-xs">
             <div className="space-y-4">
               <div>
                 <h3 className="font-serif text-xl font-bold text-[#1F3D2E]">Starter</h3>
@@ -66,7 +66,7 @@ export function PricingSection({ onOpenWaitlist }: { onOpenWaitlist: () => void 
           </div>
 
           {/* Plan 2: Creator Pro (Featured) */}
-          <div className="rounded-2xl border-2 border-[#C1622E] bg-[#F6F0E4] p-7 space-y-6 flex flex-col justify-between shadow-md relative">
+          <div className="rounded-xl sm:rounded-2xl border-2 border-[#C1622E] bg-[#F6F0E4] p-5 sm:p-7 space-y-5 sm:space-y-6 flex flex-col justify-between shadow-md relative">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
               <span className="text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-full bg-[#C1622E] text-white shadow-xs">
                 Most Popular
@@ -122,7 +122,7 @@ export function PricingSection({ onOpenWaitlist }: { onOpenWaitlist: () => void 
           </div>
 
           {/* Plan 3: Talent Agencies */}
-          <div className="rounded-2xl border border-[#E0D8C5] bg-white p-7 space-y-6 flex flex-col justify-between shadow-xs opacity-90">
+          <div className="rounded-xl sm:rounded-2xl border border-[#E0D8C5] bg-white p-5 sm:p-7 space-y-5 sm:space-y-6 flex flex-col justify-between shadow-xs opacity-90">
             <div className="space-y-4">
               <div>
                 <h3 className="font-serif text-xl font-bold text-[#1F3D2E]">Agencies &amp; Managers</h3>
