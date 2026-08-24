@@ -1,0 +1,6 @@
+<svg width="512" height="512" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>CollabOS app icon</title>
+<rect x="4" y="4" width="80" height="80" rx="20" fill="#1F3D2E"/>
+<circle cx="44" cy="44" r="26" fill="#F6F0E4"/>
+<text x="44" y="55" font-family="Baloo 2, sans-serif" font-weight="700" font-size="32" fill="#1F3D2E" text-anchor="middle">C</text>
+</svg>
